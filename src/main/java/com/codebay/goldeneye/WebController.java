@@ -57,10 +57,10 @@ public class WebController {
 
     private String generateEmail(Employee employee) {
         // Generate email using the employee information
-        char firstNameInitial = employee.getName().charAt(0);
-        String surname = employee.getSurname();
-        String department = employee.getDepartment();
-        String office = employee.getOffice().replaceAll(" ", "");
+        char firstNameInitial = employee.getName().trim().charAt(0);
+        String surname = employee.getSurname().trim();
+        String department = employee.getDepartment().trim();
+        String office = employee.getOffice().replaceAll(" ", "").trim();
         return firstNameInitial + surname + "." + department + "@" + office + ".goldeneye.com";
     }
 }

@@ -6,11 +6,4 @@ import lombok.Data;
 public class Employee {
 
     private String name, surname, department, office;
-
-    public Employee() {
-        this.name = "";
-        this.surname = "";
-        this.department = "";
-        this.office = "";
-    }
 }
